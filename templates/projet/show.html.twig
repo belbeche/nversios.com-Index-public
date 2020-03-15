@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ annonce.titre }} {% endblock %}
+
+{% block body %}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h1> {{ annonce.titre }}</h1>
+            <img src="https://images.unsplash.com/photo-1497005367839-6e852de72767?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1047&q=80" width="auto" height="230px">
+        </div>
+        <div class="col-md-4">
+            <h2> {{ app.user }}</h2>
+            <a href="#" class="btn btn-info"> Demander un devis </a>
+        </div>
+    </div>
+
+    <p>
+        {{ annonce.contenu|nl2br}}
+
+    </p>
+
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-stripped">
+                <tr>
+                    <td>Technologies</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <table class="table table-stripped">
+                <tr>
+                    <td>Utilisations</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
